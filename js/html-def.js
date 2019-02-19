@@ -6,6 +6,7 @@ class DrawerElement extends HTMLElement {
 
         this.initialClass = [];
         this.initialAttributes = [];
+        this.initialAttributesReplacements = [];
         this.initialChildren = [];
         this.initialCallbacks = [];
     }
@@ -27,7 +28,17 @@ class DrawerElement extends HTMLElement {
             elm.setAttribute(key, val);
         });
 
-        // Children
+        //Attributs replacements
+        this.initialAttributesReplacements.forEach(function (obj) {
+            if(elm.hasAttribute(obj.before.key))
+            {
+                if(obj.after.val === undefined) obj.after.val = elm.getAttribute(obj.before.key);
+                elm.setAttribute(obj.after.key, obj.after.val);
+                if(obj.replace === true) elm.removeAttribute(obj.before.key);
+            }
+        });
+
+            // Children
         this.initialChildren.forEach(function (nd) {
             elm.append(nd);
         });
@@ -58,6 +69,21 @@ class DrawerElement extends HTMLElement {
     addInitialAttribute(attr, val)
     {
         this.initialAttributes.push(JSON.parse(`{"${attr}":"${val}"}`));
+    }
+
+    replaceInitialAttribute(b_key, a_key, a_val, erase_old)
+    {
+        if(erase_old === undefined) erase_old = false;
+        this.initialAttributesReplacements.push({
+            before: {
+                key: b_key
+            },
+            after: {
+                key: a_key,
+                val: a_val
+            },
+            replace: erase_old
+        });
     }
 
     addInitialCallback(c)
@@ -143,6 +169,9 @@ window.customElements.define("drw-grp-name", class  extends DrawerElement {
 
         this.addInitialClass('card-header');
         this.addInitialAttribute('data-toggle', 'collapse');
+
+        this.replaceInitialAttribute("grp", "data-target")
+
     }
 });
 
@@ -179,6 +208,10 @@ window.customElements.define("drw-grp-member", class extends DrawerElement {
         this.addInitialClass('list-group-item-action');
 
         this.addInitialAttribute('role', 'tab');
+        this.addInitialAttribute('data-toggle', 'list');
+
+        this.replaceInitialAttribute("child-pane", "data-target")
+
 
     }
 });

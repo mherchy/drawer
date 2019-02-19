@@ -60,16 +60,14 @@
             <drw-elm> <!-- ELM -->
 
                 <!-- * Catégorie Local technique et ses instances -->
-                <drw-grp-name data-target="#list-lt">
+                <drw-grp-name grp="#list-lt">
                     Locaux techniques
                 </drw-grp-name> <!-- ELM_CAT_NAME -->
                 <drw-grp-members id="list-lt"> <!-- ELM_CAT_LIST -->
-                    <drw-grp-member id="btn-lt1" data-toggle="list"
-                                    href="#cat-lt1">
+                    <drw-grp-member id="btn-lt1" child-pane="#cat-lt1">
                         LT1
                     </drw-grp-member> <!-- CAT_INST_LINK -->
-                    <drw-grp-member id="btn-lt2" data-toggle="list"
-                                    href="#cat-lt2" role="tab">
+                    <drw-grp-member id="btn-lt2" child-pane="#cat-lt2" role="tab">
                         LT2
                     </drw-grp-member> <!-- CAT_INST_LINK -->
                     <drw-member-add id="add-lt"></drw-member-add>
@@ -100,8 +98,7 @@
                                 </drw-grp-name>
                                 <drw-grp-members id="list-sw">
                                     <drw-grp-member id="btn-sw1"
-                                                    data-toggle="list"
-                                                    href="#cat-sw1">
+                                                    child-pane="#cat-sw1">
                                         SW1
                                     </drw-grp-member>
                                     <drw-member-add id="add-sw"></drw-member-add>
@@ -216,6 +213,10 @@
         });
 
     });
+
+
+
+
 
 
 </script>
