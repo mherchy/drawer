@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Matthieu HERCHY">
+    <title>Projet 20/02</title>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ICONS -->
+    <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" rel="stylesheet">
+    <link href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css" rel="stylesheet">
+    <link href="node_modules/@fortawesome/fontawesome-free/css/solid.min.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="js/html-def.js"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">20/02</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Fenetre de hierarchie 1 -->
+<main role="main" class="container">
+
+
+    <h1 style="padding-top: 200px"></h1>
+    <h2>Administration</h2>
+    <h3>Liste des Locaux techniques</h3>
+
+    <drw-area> <!-- ESP -->
+
+        <drw-area-elm> <!-- ESP_ELM -->
+
+            <drw-elm> <!-- ELM -->
+
+                <!-- * Catégorie Local technique et ses instances -->
+                <drw-grp-name data-target="#list-lt">
+                    Locaux techniques
+                </drw-grp-name> <!-- ELM_CAT_NAME -->
+                <drw-grp-members id="list-lt"> <!-- ELM_CAT_LIST -->
+                    <drw-grp-member id="btn-lt1" data-toggle="list"
+                                    href="#cat-lt1">
+                        LT1
+                    </drw-grp-member> <!-- CAT_INST_LINK -->
+                    <drw-grp-member id="btn-lt2" data-toggle="list"
+                                    href="#cat-lt2" role="tab">
+                        LT2
+                    </drw-grp-member> <!-- CAT_INST_LINK -->
+                    <drw-member-add id="add-lt"></drw-member-add>
+                </drw-grp-members>
+
+            </drw-elm>
+        </drw-area-elm>
+
+
+        <drw-area-children> <!-- ESP_CHILD -->
+
+
+            <drw-children-container id="nav-tabContent"> <!-- CHILDREN_CONTAINER -->
+
+
+                <!-- LT1 -->
+                <drw-child-pane id="cat-lt1"> <!-- CHILD_PANE -->
+
+                    <drw-area> <!-- ESP -->
+
+                        <drw-area-elm>
+
+                            <drw-elm>
+
+                                <!-- * Catégorie Switch et ses instances -->
+                                <drw-grp-name data-target="#list-sw">
+                                    Switch
+                                </drw-grp-name>
+                                <drw-grp-members id="list-sw">
+                                    <drw-grp-member id="btn-sw1"
+                                                    data-toggle="list"
+                                                    href="#cat-sw1">
+                                        SW1
+                                    </drw-grp-member>
+                                    <drw-member-add id="add-sw"></drw-member-add>
+                                </drw-grp-members>
+
+                                <!-- * Catégorie PA et ses instances -->
+                                <drw-grp-name>
+                                    PA
+                                </drw-grp-name>
+                                <!-- * Catégorie Rocade et ses instances -->
+                                <drw-grp-name>
+                                    Rocade
+                                </drw-grp-name>
+                                <!-- * Catégorie Onduleur et ses instances -->
+                                <drw-grp-name>
+                                    Onduleur
+                                </drw-grp-name>
+                                <!-- * Catégorie Serveur et ses instances -->
+                                <drw-grp-name>
+                                    Serveur
+                                </drw-grp-name>
+
+                            </drw-elm>
+
+                        </drw-area-elm>
+
+                        <drw-area-children>
+                            <drw-children-container>
+
+                                <!-- Fenetre de hierarchie 3 -->
+                                <drw-child-pane id="cat-sw1">
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title">Informations sur le Switch</div>
+                                            <dl>
+                                                <dt>Nom</dt>
+                                                <dd>Switch1</dd>
+                                                <dt>Adresse</dt>
+                                                <dd>172.168.22.1</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+
+                                </drw-child-pane>
+
+                            </drw-children-container>
+                        </drw-area-children>
+                    </drw-area>
+
+                </drw-child-pane>
+
+
+                <!-- LT2 -->
+                <drw-child-pane id="cat-lt2">
+                    ...
+                </drw-child-pane>
+
+
+            </drw-children-container>
+
+
+        </drw-area-children>
+
+    </drw-area>
+
+
+</main>
+
+
+<div class="modal fade" id="modal-add-elm" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="#" id="form-add-elm">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ajouter un élément <span class="elm-requested"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label>Nom du périphérique</label>
+                    <input class="form-control" placeholder="Nom">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $(function () {
+
+
+        /**
+         * Appuie sur un bouton add
+         */
+        $("#add-lt").click(function () {
+            $('#modal-add-elm').modal("show");
+        });
+
+        $("#form-add-elm").submit(function (event) {
+            event.preventDefault();
+            console.log("yo");
+            let val = $(this).find('input').val();
+            console.log(val);
+        });
+
+    });
+
+
+</script>
+
+<script>
+
+    //
+
+
+</script>
+
+
+</body>
+</html>

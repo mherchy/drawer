@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+
+    <drw-area> <!-- <div class="row"> -->
+
+        <drw-area-elm> <!-- <div class="col-4"> -->
+
+            <drw-elm> <!-- <div class="card" role="tablist"> -->
+
+
+                    <drw-grp-name> <!-- <div class="card-header" id="..." data-toggle="collapse" data-target="..."> -->
+
+                    </drw-grp-name>
+
+                    <drw-grp-members> <!-- <div class="list-group list-group-flush collapse" id="..."> -->
+
+                        <drw-grp-member> <!--<a class="list-group-item list-group-item-action" id="..." data-toggle="list"
+                                                           href="..." role="tab">-->
+                        </drw-grp-member>
+
+                        <drw-grp-member>
+                        </drw-grp-member>
+
+                        <drw-member-add> <!-- <a class="list-group-item list-group-item-action" id="..."><span class="fas fa-plus"></>  -->
+                        </drw-member-add>
+
+
+                    </drw-grp-members>
+
+
+
+            </drw-elm>
+
+        </drw-area-elm>
+
+
+
+        <drw-area-children> <!-- <div class="col-8"> -->
+
+            <drw-children-container> <!-- <div class="tab-content"> -->
+
+                <drw-child-pane> <!-- <div class="tab-pane fade" id="..." role="tabpanel"> -->
+
+                    <drw-area><!-- 2nd Level --></drw-area>
+
+
+                </drw-child-pane>
+
+            </drw-children-container>
+
+        </drw-area-children>
+
+
+
+
+
+    </drw-area>
+
+
+
+
+</root>
