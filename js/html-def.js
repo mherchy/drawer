@@ -127,7 +127,7 @@ window.customElements.define("drw-area-elm", class extends DrawerElement {
 
 
 /**
- * drw-area-children
+ * drw-area-content
  *
  *
  */
@@ -218,7 +218,7 @@ window.customElements.define("drw-grp-member", class extends DrawerElement {
 
 
 /**
- * drw-member-add
+ * drw-member-_add
  *
  *
  */
@@ -239,7 +239,7 @@ window.customElements.define("drw-member-add", class extends DrawerElement {
 
 
 /**
- * drw-children-container
+ * drw-content-container
  *
  *
  */
@@ -269,6 +269,34 @@ window.customElements.define("drw-child-pane", class extends DrawerElement {
 
         this.addInitialAttribute('role', 'tabpanel');
 
+    }
+});
+
+
+/**
+ * drw-elm-data
+ *
+ *
+ */
+window.customElements.define("drw-elm-data", class extends DrawerElement {
+    constructor() {
+        super();
+
+        this.addInitialClass('card');
+
+    }
+});
+
+
+/**
+ * drw-data
+ *
+ *
+ */
+window.customElements.define("drw-data", class extends DrawerElement {
+    constructor() {
+        super();
+        this.addInitialClass('card-body');
     }
 });
 

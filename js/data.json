@@ -1,0 +1,98 @@
+[
+	{
+		"type": "lc",
+		"nom": "Local Technique",
+		"members": [
+			{
+				"nom": "LT1",
+				"structure": [
+					{
+						"type": "sw",
+						"nom": "Switch",
+						"members": [
+							{
+								"nom": "SW1",
+								"data": {
+									"Nom": "SW1",
+									"Adresse": "192.168.22.4"
+								}
+							},
+							{
+								"nom": "SW2",
+								"data": {
+									"Nom": "SW1",
+									"Adresse": "192.168.22.5"
+								}
+							}
+						]
+					},
+					{
+						"type": "pa",
+						"nom": "PA",
+						"members": []
+					},
+					{
+						"type": "roc",
+						"nom": "Rocade",
+						"members": []
+					},
+					{
+						"type": "ond",
+						"nom": "Onduleur",
+						"members": []
+					},
+					{
+						"type": "ser",
+						"nom": "Serveur",
+						"members": []
+					}
+				]
+			},
+			{
+				"nom": "LT2",
+				"structure": [
+					{
+						"type": "sw",
+						"nom": "Switch",
+						"members": [
+							{
+								"nom": "SW3",
+								"data": {
+									"Nom": "SW3",
+									"Adresse": "192.168.23.4"
+								}
+							},
+							{
+								"nom": "SW4",
+								"data": {
+									"Nom": "SW4",
+									"Adresse": "192.168.23.5"
+								}
+							}
+						]
+					},
+					{
+						"type": "pa",
+						"nom": "PA",
+						"members": []
+					},
+					{
+						"type": "roc",
+						"nom": "Rocade",
+						"members": []
+					},
+					{
+						"type": "ond",
+						"nom": "Onduleur",
+						"members": []
+					},
+					{
+						"type": "ser",
+						"nom": "Serveur",
+						"members": []
+					}
+				]
+			}
+		]
+	}
+]
